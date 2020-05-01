@@ -1,4 +1,8 @@
 User-agent: *
 Disallow: /
+<<<<<<< HEAD
 dff
 g
+=======
+dff2
+>>>>>>> 538141a0ad2351913d378ba1c9be2ac5918a5e05
