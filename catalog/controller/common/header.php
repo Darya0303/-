@@ -36,13 +36,15 @@ class ControllerCommonHeader extends Controller {
 		$data['direction'] = $this->language->get('direction');
 		$data['telephone'] = $this->config->get('config_telephone');
 		$data['fax'] = $this->config->get('config_fax'); 
+		$data['telephone2'] = str_replace(['(',')','_','-',' '], '', $this->config->get('config_telephone'));
+		$data['fax2'] = str_replace(['(',')','_','-',' '], '', $this->config->get('config_fax')); 
 		$data['open'] = $this->config->get('config_open');
 
 		$data['name'] = $this->config->get('config_name');
 
 		if (is_file(DIR_IMAGE . $this->config->get('config_logo'))) {
 			$data['logo'] = $server . 'image/' . $this->config->get('config_logo');
-		} else {
+		} else { 
 			$data['logo'] = '';
 		}
 
@@ -56,7 +58,11 @@ class ControllerCommonHeader extends Controller {
 		} else {
 			$data['text_wishlist'] = sprintf($this->language->get('text_wishlist'), (isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0));
 		}
-		$data['home'] = $this->url->link('common/home');        $data['telephone'] = $this->config->get('config_telephone');		$data['items'] = $this->load->controller('extension/module/zmenu/getMenuItems', 32);        $data['search'] = $this->load->controller('common/search');		$data['cart'] = $this->load->controller('common/cart');
+		$data['home'] = $this->url->link('common/home');        
+		$data['items2'] = $this->load->controller('extension/module/zmenu/getMenuItems', 33);		
+		$data['items'] = $this->load->controller('extension/module/zmenu/getMenuItems', 32);        
+		$data['search'] = $this->load->controller('common/search');		
+		$data['cart'] = $this->load->controller('common/cart');
 		return $this->load->view('common/header', $data);
 	}
 }
