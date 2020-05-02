@@ -65,7 +65,7 @@ $(document).ready(function() {
 	
 	$('.search').on('click', function() {
 		$('#search').slideToggle();
-		return false;
+		return false; 
 	});
 
 	$('#search input[name=\'search\']').on('keydown', function(e) {
