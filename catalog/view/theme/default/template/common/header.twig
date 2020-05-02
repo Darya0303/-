@@ -35,10 +35,9 @@
 	    <div class="container">    
 		  <div class="flex jus header">      
 		    <div class="col-2">        
-			  <div id="logo">{% if logo %}<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>{% else %}          <h1><a href="{{ home }}">{{ name }}</a></h1>          {% endif %}</div>      
+			    <div id="logo">{% if logo %}<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>{% else %}          <h1><a href="{{ home }}">{{ name }}</a></h1>          {% endif %}</div>      
 			</div>     
-			<div class="col-5 flex2 flex-right">
-			  <div class="flex2 tels" style="align-items: flex-end">
+			<div class="flex2 tels flex-right" style="align-items: flex-end">
 			    <div>
 		      	  <div class="open">{{ open }}</div>
 			      <a href="tel:{{ telephone2 }}" class="tel">{{ telephone }}</a>
@@ -46,9 +45,9 @@
 				<div>
 			      <a href="tel:{{ fax2 }}" class="tel">{{ fax }}</a>
 				</div>
-			  </div>
+				<div class="open"><a href="/delivery">Бесплатная доставка</a> по Москве от 5000 руб</div>
 			</div>  
-            <div class="col-3 flex flex-right">{{ cart }}</div>  			
+            {{ cart }} 			
 		   </div>  
 		</div>
 		{% if items2 %}     
@@ -57,7 +56,19 @@
 		    <ul class="flex jus notul"> 
                 <li style="position: relative">{{ search }}</li>			
 			    {% for i in items2 %}        		
-				<li><a href="{{ i.href }}">{{ i.title }}</a></li>		
+				<li>
+				  <a href="{{ i.href }}" class="amenu">{{ i.title }}</a>
+				  {% if i.childs %}
+                  <div class="main_menu flex2 jus">
+                    <p>Категории</p>				  
+	   			    <ul class="second notul flex2 wrap col-8">
+				      {% for i2 in i.childs %} 
+			   		  <li><a href="{{ i2.href }}">{{ i2.title }}</a></li>
+					  {% endfor %}
+				    </ul>
+				  </div>
+				  {% endif %}
+				</li>		
 				{% endfor %}      
 			</ul> 	
 		   </div>  
