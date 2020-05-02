@@ -1,9 +1,9 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'https://baby/');
+define('HTTP_SERVER', 'https://Baby/');
 
 // HTTPS
-define('HTTPS_SERVER', 'https://baby/');
+define('HTTPS_SERVER', 'https://Baby/');
 
 // DIR
 define('DIR_APPLICATION', 'D:\OpenServer\domains\Baby/catalog/');
