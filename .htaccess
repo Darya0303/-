@@ -1,3 +1,4 @@
+Header set Access-Control-Allow-Origin "*"
 Options +FollowSymlinks
 Options -Indexes
 <FilesMatch "(?i)((\.tpl|.twig|\.ini|\.log|(?<!robots)\.txt))">

@@ -1,11 +1,11 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://babyhere.ru/admin/');
-define('HTTP_CATALOG', 'http://baby/');
+define('HTTP_SERVER', 'https://babyhere.ru/admin/');
+define('HTTP_CATALOG', 'https://baby/');
 
 // HTTPS
-define('HTTPS_SERVER', 'http://baby/admin/');
-define('HTTPS_CATALOG', 'http://baby/');
+define('HTTPS_SERVER', 'https://baby/admin/');
+define('HTTPS_CATALOG', 'https://baby/');
 
 // DIR
 define('DIR_APPLICATION', 'D:/[]/OpenServer/domains/baby/admin/');
