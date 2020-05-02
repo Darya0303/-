@@ -1,18 +1,18 @@
 <?php
 // HTTP
 define('HTTP_SERVER', 'http://babyhere.ru/admin/');
-define('HTTP_CATALOG', 'http://babyhere.ru/');
+define('HTTP_CATALOG', 'http://baby/');
 
 // HTTPS
-define('HTTPS_SERVER', 'http://babyhere.ru/admin/');
-define('HTTPS_CATALOG', 'http://babyhere.ru/');
+define('HTTPS_SERVER', 'http://baby/admin/');
+define('HTTPS_CATALOG', 'http://baby/');
 
 // DIR
-define('DIR_APPLICATION', '/home/a0305361/domains/babyhere.ru/public_html/admin/');
-define('DIR_SYSTEM', '/home/a0305361/domains/babyhere.ru/public_html/system/');
-define('DIR_IMAGE', '/home/a0305361/domains/babyhere.ru/public_html/image/');
-define('DIR_STORAGE', '/home/a0305361/domains/babyhere.ru/storage/');
-define('DIR_CATALOG', '/home/a0305361/domains/babyhere.ru/public_html/catalog/');
+define('DIR_APPLICATION', 'D:/[]/OpenServer/domains/baby/admin/');
+define('DIR_SYSTEM', 'D:/[]/OpenServer/domains/baby/system/');
+define('DIR_IMAGE', 'D:/[]/OpenServer/domains/baby/image/');
+define('DIR_STORAGE', 'D:/[]/OpenServer/domains/storage/');
+define('DIR_CATALOG', 'D:/[]/OpenServer/domains/baby/catalog/');
 define('DIR_LANGUAGE', DIR_APPLICATION . 'language/');
 define('DIR_TEMPLATE', DIR_APPLICATION . 'view/template/');
 define('DIR_CONFIG', DIR_SYSTEM . 'config/');
@@ -26,9 +26,9 @@ define('DIR_UPLOAD', DIR_STORAGE . 'upload/');
 // DB
 define('DB_DRIVER', 'mysqli');
 define('DB_HOSTNAME', 'localhost');
-define('DB_USERNAME', 'a0305361_vitaliy');
-define('DB_PASSWORD', 'qwerasdf');
-define('DB_DATABASE', 'a0305361_babyhere');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
+define('DB_DATABASE', 'baby');
 define('DB_PORT', '3306');
 define('DB_PREFIX', 'oc_');
 
