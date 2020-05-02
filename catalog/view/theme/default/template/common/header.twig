@@ -12,6 +12,7 @@
 {% if description %}<meta name="description" content="{{ description }}" />{% endif %}
 {% if keywords %}<meta name="keywords" content="{{ keywords }}" />{% endif %}
 <link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet">
+<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
 {% for style in styles %}<link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" />{% endfor %}
 {% for link in links %}<link href="{{ link.href }}" rel="{{ link.rel }}" />{% endfor %}
 {% for analytic in analytics %}{{ analytic }}{% endfor %}
@@ -24,7 +25,7 @@
 		    <div id="top-links" class="flex flex-right">    	  
 			  <ul class="flex jus notul">        
 			    {% for i in items %}        		
-				<li><a href="{{ i.href }}">{{ i.title }}</a></li>		
+				<li><a href="{{ i.href }}">{{ i.title }}{% if 'compare' in i.href %}<span id="compare_total">0</span>{% endif %}{% if 'wishlist' in i.href %}<span id="wishlist_total">0</span>{% endif %}</a></li>		
 				{% endfor %}      
 			  </ul>  	  
 			</div>  	
@@ -32,23 +33,34 @@
 		</nav>  
 		{% endif %}    
 	    <div class="container">    
-		  <div class="flex jus">      
+		  <div class="flex jus header">      
 		    <div class="col-2">        
 			  <div id="logo">{% if logo %}<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>{% else %}          <h1><a href="{{ home }}">{{ name }}</a></h1>          {% endif %}</div>      
 			</div>     
-			<div class="col-5 flex-right">
-			  <div class="flex2 alc-right flex-right">
+			<div class="col-5 flex2 flex-right">
+			  <div class="flex2 tels" style="align-items: flex-end">
 			    <div>
 		      	  <div class="open">{{ open }}</div>
-			      <a href="tel:{{ telephone }}" class="tel">{{ telephone }}</a>
+			      <a href="tel:{{ telephone2 }}" class="tel">{{ telephone }}</a>
 				</div>
 				<div>
-			      <a href="tel:{{ fax }}" class="tel">{{ fax }}</a>
+			      <a href="tel:{{ fax2 }}" class="tel">{{ fax }}</a>
 				</div>
 			  </div>
 			</div>  
-            <div class="col-3 flex-right">{{ cart }}</div>  			
+            <div class="col-3 flex flex-right">{{ cart }}</div>  			
 		   </div>  
 		</div>
+		{% if items2 %}     
+	    <div id="menu">      
+		  <div class="container">    	  
+		    <ul class="flex jus notul">        
+			    {% for i in items2 %}        		
+				<li><a href="{{ i.href }}">{{ i.title }}</a></li>		
+				{% endfor %}      
+			</ul> 	
+		   </div>  
+		</div>  
+		{% endif %} 
 	</header>
 	<main>
