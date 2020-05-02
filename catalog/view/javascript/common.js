@@ -62,6 +62,11 @@ $(document).ready(function() {
 
 		location = url;
 	});
+	
+	$('.search').on('click', function() {
+		$('#search').slideToggle();
+		return false;
+	});
 
 	$('#search input[name=\'search\']').on('keydown', function(e) {
 		if (e.keyCode == 13) {

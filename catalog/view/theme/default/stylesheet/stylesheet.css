@@ -161,6 +161,8 @@ body {
 	font-family: 'Harmonia Sans Pro Cyr';
 	margin: 0;
 }
+* {box-sizing: border-box}
+button, input, select {outline: 0}
 a {text-decoration: none;transition: .5s ease;animation-play-state: running}
 p {margin-bottom: 10px;margin-top:0;}
 .flex {    display: flex;    align-items: center;    display: -webkit-box;    display: -moz-box;    display: -ms-flexbox;    display: -webkit-flex;    -webkit-box-align: center;}
@@ -286,6 +288,36 @@ p {margin-bottom: 10px;margin-top:0;}
 }
 #menu a:hover, #top-links a:hover {
     color: #ddd
+}
+#search {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 99;
+    width: 235px;
+    padding: 8px;
+    background: #fff;
+    box-shadow: 0 0 18px 2px rgba(0, 0, 0, 0.14901960784313725);
+}
+.form-control {
+    padding: 10px;
+    border: 1px solid rosybrown;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Harmonia Sans Pro Cyr';
+}
+#search button {
+	background: transparent;
+    border: 1px solid rosybrown;
+    box-shadow: none;
+    outline: none;
+    padding: 0 15px;
+    height: 40px;
+    float: left;
+}
+#search input {
+    float: left;
 }
 
 

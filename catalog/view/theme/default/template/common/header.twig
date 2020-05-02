@@ -54,7 +54,8 @@
 		{% if items2 %}     
 	    <div id="menu">      
 		  <div class="container">    	  
-		    <ul class="flex jus notul">        
+		    <ul class="flex jus notul"> 
+                <li style="position: relative">{{ search }}</li>			
 			    {% for i in items2 %}        		
 				<li><a href="{{ i.href }}">{{ i.title }}</a></li>		
 				{% endfor %}      
